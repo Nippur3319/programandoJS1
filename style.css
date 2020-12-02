@@ -1,0 +1,19 @@
+.container {
+  margin: auto;
+  padding: 5%;
+  max-width: 80%;
+  background-color: gray;
+  font-family: monospace;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.ejercicio {
+  max-width: 90%;
+  /*  border: 1px solid blue;*/
+}
