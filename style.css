@@ -17,3 +17,12 @@ h1 {
   max-width: 90%;
   /*  border: 1px solid blue;*/
 }
+
+@media (max-width: 768px) {
+  h1 {
+    grid-column-end: 2;
+  }
+  .container {
+    grid-template-columns: 100%;
+  }
+}
