@@ -76,16 +76,13 @@ const ejercicio04 = () => {
       counterOneDigit += 1
 
       acumOneDigit = acumOneDigit + number
-    }
-    
+    }    
     
     avgOneDigit();
 
   } while (input != "Salir");
 
    alert("promedio " + avg);
-
-
 
   function avgOneDigit(){
     avg = acumOneDigit / counterOneDigit
@@ -149,9 +146,8 @@ const ejercicio06 = () => {
 
   // llamo a la función con el parámetro
     setCharacter(digit)
-
-
   } else {
+    // si no está dentro del rango o es distinto, sale
     alert("datos erróneos");
   }
 
@@ -179,10 +175,42 @@ function setCharacter(value) {
     break;
     case 10: alert("J");
     break;
+
   }
 }
 
 
 
 }
+
+
+
+
+//Challenge encuentro 24 - 11/12/2020
+// Escribe una función arrow que reciba como parámetro un array y calcule el promedio de los elementos tipo numérico.
+function challengeClase24() {
+  let element;
+  let index = 0;
+  let acum = 0;
+  let array = [104,1,1,1,"dfd",1,1]
+  let average = 0;
+  let contador = 0;
+  const promediarArray = (array) => {
+    for (index = 0; index < array.length; index++) {
+      if (typeof(array[index]) === "number") {
+         element = array[index];
+        contador ++
+        acum = acum + element ;
+        average = acum / contador
+      }
+    }
+    console.log("el array cuenta con : " + index + " elementos");
+    console.log("de los " + index + " elementos, " + contador + " son numéricos");
+    console.log("la suma de los elementos numéricos es: " + acum);
+    console.log("el promedio es: " + acum +" / " + contador + " = " + average);
+    document.getElementById("parr").innerHTML = `el array cuenta con ${index} elementos, de los cuales ${contador} son numéricos. La suma de los elementos numéricos es: ${acum} y  el promedio es: ${acum} / ${contador} = ${average}`
+  }
+  promediarArray(array);
+}
+
 

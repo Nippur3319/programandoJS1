@@ -18,6 +18,10 @@ h1 {
   /*  border: 1px solid blue;*/
 }
 
+#parr {
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
   h1 {
     grid-column-end: 2;
